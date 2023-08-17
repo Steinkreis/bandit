@@ -79,17 +79,17 @@ def plot_rewards(*policies: BasePolicy, title=None):
         # Plots
         ax1.plot(timesteps, avg_rewards, label=policy.name)
         ax2.plot(timesteps, cumsum_rewards, label=policy.name)
-    
+
     ax1.yaxis.set_major_formatter(FormatStrFormatter("%.1f"))
     ax1.set_xlabel("Zeitschritt")
     ax1.set_ylabel("Durchschnittliche Belohnung")
     ax1.legend(loc="lower right")
-    
+
     ax2.yaxis.set_major_formatter(FormatStrFormatter("%d"))
     ax2.set_xlabel("Zeitschritt")
     ax2.set_ylabel("Kumulative Belohnung")
     ax2.legend(loc="lower right")
-    
+
     plt.tight_layout()
     plt.show()
 

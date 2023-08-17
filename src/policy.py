@@ -20,9 +20,6 @@ class BasePolicy(ABC):
     def get_recommendations(self):
         """
         Gibt Empfehlungen für Aktionen (movieIds) basierend auf der Richtlinie zurück.
-
-        Returns:
-            list: Eine Liste von Empfehlungen für Aktionen (movieIds).
         """
         ...
 
