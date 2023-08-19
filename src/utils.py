@@ -91,6 +91,7 @@ def plot_rewards(*policies: BasePolicy, title=None):
     ax2.legend(loc="lower right")
 
     plt.tight_layout()
+    plt.savefig(os.path.join(os.path.dirname(__file__), "..", "imgs", "experiment", f"{title}.PNG"))
     plt.show()
 
 
@@ -101,7 +102,8 @@ def plot_action_values(*policies: BasePolicy):
         *policies (BasePolicy): Eine Liste von Richtlinien (Policy)-Objekten.
     """
     fig, axs = plt.subplots(nrows=1, ncols=len(policies), figsize=(15, 5), squeeze=False)
-    fig.suptitle("Aktionsscores")
+    title = "Aktionswerte"
+    fig.suptitle(title)
     axs = axs.ravel()
     for i, policy in enumerate(policies):
         cbar = True if i == len(axs) - 1 else False
@@ -119,6 +121,7 @@ def plot_action_values(*policies: BasePolicy):
         axs[i].title.set_text(policy.name)
     axs[0].set_ylabel("movieId")
     plt.tight_layout()
+    plt.savefig(os.path.join(os.path.dirname(__file__), "..", "imgs", "experiment", f"{title}.PNG"))
     plt.show()
 
 

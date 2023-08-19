@@ -13,7 +13,7 @@ def main():
     SLATE_SIZE = 5
     BATCH_SIZE = 100
     STREAM_LENGTH = 50000
-    SCORES_LOG = False  # Loggen der Filmbewertungen
+    SCORES_LOG = False
 
     ######################################################################
 
@@ -50,3 +50,7 @@ def main():
     plot_rewards(*policies, title=title)
     if SCORES_LOG is True:
         plot_action_values(*policies)
+
+
+if __name__=="__main__":
+    main()
