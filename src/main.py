@@ -4,7 +4,6 @@ from policy import EpsilonGreedy, UCB1, ThompsonSampling
 from utils import get_data, plot_rewards, plot_action_values
 
 
-
 def main():
     ######################################################################
 

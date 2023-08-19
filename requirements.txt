@@ -1,0 +1,7 @@
+ipykernel
+matplotlib
+networkx
+pandas==1.5
+scipy
+seaborn
+tqdm
